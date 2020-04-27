@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+</body>
+</html>
+
+<script>
+
+    snake = [
+        {
+            x: 0,
+            y: 0,
+            color: "blue"
+        },
+        {
+            x: this.space,
+            y: 0,
+            color: "blue"
+        },
+        {
+            x: this.space * 2,
+            y: 0,
+            color: "red"
+        }
+    ];
+
+      for(var i = 0 ; i < snake.length ; i++){
+        for(var j =  i+1 ; j < snake.length ; j++){
+            if(snake[j].x == snake[i].x && snake[j].y ==snake[i].y ){
+                console.log("蛇头和身体碰撞了");
+                clearInterval(this.timer);
+                return;
+            }
+        }
+    }
+
+</script>
